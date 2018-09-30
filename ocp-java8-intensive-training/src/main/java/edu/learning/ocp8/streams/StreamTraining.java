@@ -69,6 +69,7 @@ public class StreamTraining {
     private static void test05() {
         Stream stream = Stream.of(10, 20, "30");
         boolean out = stream.allMatch(in -> in instanceof Number);
+        System.out.println("test05:");
         System.out.println(out);
     }
 
@@ -80,7 +81,9 @@ public class StreamTraining {
         Optional<Integer> min = s.filter((Integer p) -> p%2==0)
                 //.mapToDouble(Double::valueOf)
                 .min((a,b)->a-b);
-        ObjIntConsumer cons = (Object I, int i) -> System.out.println(i+1);
+        System.out.println("test06:");
+        System.out.print(min);
+        //ObjIntConsumer cons = (Object I, int i) -> System.out.println(i+1);
     }
 
     private static void test07() {
